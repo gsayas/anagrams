@@ -17,7 +17,7 @@ class AnagramsTest {
     @Test
     void testAreAnagramsFalse() {
         assertFalse(Anagrams.areAnagrams("Anagram", "Anagramm"));
-        assertFalse(Anagrams.areAnagrams("xx", "xx"));
+        assertFalse(Anagrams.areAnagrams("xx", "xxx"));
         assertFalse(Anagrams.areAnagrams("Test", "aTest"));
     }
 }
