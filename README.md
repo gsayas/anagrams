@@ -16,7 +16,7 @@
 
 ## Implementation
 
-The implementation is located at src/main/java/org/example/Anagrams.java
+The implementation is located at [src/main/java/org/example/Anagrams.java](https://github.com/gsayas/anagrams/blob/main/src/main/java/org/example/Anagrams.java)
 
 I went with a straight-forward sorting based solution prioritizing readability and simplicity over performance.
 Perhaps we can discuss alternatives in our follow-up chat.
