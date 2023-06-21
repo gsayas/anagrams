@@ -21,8 +21,8 @@ public class Anagrams {
     }
 
     public static boolean areAnagrams(String text1, String text2) {
-        String cleanText1 = text1.replace(" ", "").toLowerCase();
-        String cleanText2 = text2.replace(" ", "").toLowerCase();
+        String cleanText1 = getCleanText(text1);
+        String cleanText2 = getCleanText(text2);
 
         if(cleanText1.length() != cleanText2.length()) return false;
 
@@ -32,5 +32,9 @@ public class Anagrams {
         Arrays.sort(charArray2);
 
         return Arrays.equals(charArray1, charArray2);
+    }
+
+    private static String getCleanText(String text1) {
+        return text1.replace(" ", "").toLowerCase();
     }
 }
