@@ -1,5 +1,21 @@
+import org.gradle.api.tasks.JavaExec
+
 plugins {
     id("java")
+    id("application")
+}
+
+application {
+    mainClass.set("org.example.Anagrams")
+}
+
+tasks.register("anagramChecker", JavaExec::class) {
+    group = "application"
+    mainClass.set("org.example.Anagrams")
+    classpath = sourceSets["main"].runtimeClasspath
+    if (project.hasProperty("appArgs")) {
+        args = (findProperty("appArgs") as String).split(",")
+    }
 }
 
 group = "org.example"
